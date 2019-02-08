@@ -169,6 +169,7 @@ return [
         /*
          * Application Service Providers...
          */
+        Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
@@ -190,6 +191,7 @@ return [
 
     'aliases' => [
 
+        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
