@@ -17,6 +17,7 @@ class jwtMiddleware
     {
         try {
             $user = JWTAuth::toUser($request->input('token'));
+            
         } catch (Exception $e) {
             if ($e instanceof \Tymon\JWTAuth\Exceptions\TokenInvalidException){
                 return $next($request);
