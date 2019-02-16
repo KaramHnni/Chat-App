@@ -28,8 +28,8 @@ Route::group(['middleware' => ['jwt.auth','api-header']], function () {
 
 });
 
-Route::group(['middleware' => 'api-header'], function () {
+Route::group(['middleware' => 'api-header' ,'namespace' => 'User' , 'prefix' => 'user'], function () {
 
-    Route::post('user/login', 'User\UserController@login')->name('login');
-    Route::post('user/register', 'User\UserController@register');
+    Route::post('/login', 'User\UserController@login')->name('login');
+    Route::post('/register', 'User\UserController@register');
 });

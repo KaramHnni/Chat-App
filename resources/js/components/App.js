@@ -21,7 +21,7 @@ export default class App extends Component {
         formData.append("email" , email);
         formData.append("password" , password);
         axios
-            .post("chatapp.test/api/user/login/" ,formData )
+            .post("/api/user/register/" ,formData )
             .then(response =>{ 
                 console.log(response);
                 return response;
@@ -56,15 +56,17 @@ export default class App extends Component {
 
     userregister(name, email, password) {
         
-        var formData = new FormData(); 
-        formData.append("password", password);
-        formData.append("email", email);
-        formData.append("name", name);
+        
+        
     
         axios
-          .post("chatapp.test/api/user/register", formData)
+          .post("/api/user/register/", {
+            name : name,
+            email : email,
+            password : password,
+          })
           .then(response => {
-            console.log(response);
+            console.log(response.success);
             return response;
           })
           .then(json => {

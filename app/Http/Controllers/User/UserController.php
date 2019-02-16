@@ -47,14 +47,13 @@ class UserController extends Controller
     }
     public function register(Request $request)
     { 
-        $payload = [
-            'password'=>\Hash::make($request->password),
-            'email'=>$request->email,
-            'name'=>$request->name,
-            'auth_token'=> ''
-        ];
                   
-        $user = new \App\User($payload);
+        $user = new User;
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->auth_token = '';
+        
         if ($user->save())
         {
             
@@ -70,10 +69,11 @@ class UserController extends Controller
             
             $response = ['success'=>true, 'data'=>['name'=>$user->name,'id'=>$user->id,'email'=>$request->email,'auth_token'=>$token]];        
         }
-        else
+        else{
             $response = ['success'=>false, 'data'=>'Couldnt register user'];
         
         
         return response()->json($response, 201);
+        }
     }
 }
