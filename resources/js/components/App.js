@@ -20,9 +20,8 @@ export default class App extends Component {
         var formData = new FormData();
         formData.append("email" , email);
         formData.append("password" , password);
-    
         axios
-            .post("chat.test/api/user/login/" ,formData )
+            .post("chatapp.test/api/user/login/" ,formData )
             .then(response =>{ 
                 console.log(response);
                 return response;
@@ -63,7 +62,7 @@ export default class App extends Component {
         formData.append("name", name);
     
         axios
-          .post("http://localhost:8000/api/user/register", formData)
+          .post("chatapp.test/api/user/register", formData)
           .then(response => {
             console.log(response);
             return response;
