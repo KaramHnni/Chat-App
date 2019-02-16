@@ -47857,79 +47857,39 @@ var Login = function Login(_ref) {
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "main"
+    id: "main",
+    className: "flex items-center justify-around"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    id: "login-form",
+    style: {
+      width: 600
+    },
+    className: "my-32 bg-white py-12 text-center",
     action: "",
     onSubmit: handleLogin,
     method: "post"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    style: {
-      padding: 15
-    }
-  }, "Login Form"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     ref: function ref(input) {
       return _email = input;
     },
-    style: styles.input,
-    autoComplete: "off",
-    id: "email-input",
     name: "email",
     type: "text",
-    className: "center-block",
+    className: " rounded focus:border-blue block my-8 w-4/5 mx-auto border border-solid border-grey-lighter py-4 px-4 text-grey-darkest",
     placeholder: "email"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     ref: function ref(input) {
       return _password = input;
     },
-    style: styles.input,
-    autoComplete: "off",
-    id: "password-input",
     name: "password",
     type: "password",
-    className: "center-block",
+    className: "rounded focus:border-blue block my-8 w-4/5 mx-auto border border-solid border-grey-lighter py-4 px-4 text-grey-darkest",
     placeholder: "password"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "submit",
-    style: styles.button,
-    className: "landing-page-btn center-block text-center",
-    id: "email-login-btn",
-    href: "#facebook"
-  }, "Login")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    style: styles.link,
-    to: "/register"
-  }, "Register"));
+    value: "submit",
+    className: "rounded shadow inline-block px-4 py-2 text-white bg-blue hover:bg-blue-dark focus:bg-blue-darker font-semibold text-center"
+  })));
 };
 
-var styles = {
-  input: {
-    backgroundColor: "white",
-    border: "1px solid #cccccc",
-    padding: 15,
-    float: "left",
-    clear: "right",
-    width: "80%",
-    margin: 15
-  },
-  button: {
-    height: 44,
-    boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
-    border: "none",
-    backgroundColor: "red",
-    margin: 15,
-    float: "left",
-    clear: "both",
-    width: "85%",
-    color: "white",
-    padding: 15
-  },
-  link: {
-    width: "100%",
-    float: "left",
-    clear: "both",
-    textAlign: "center"
-  }
-};
 /* harmony default export */ __webpack_exports__["default"] = (Login);
 
 /***/ }),
